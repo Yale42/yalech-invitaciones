@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mariana & Diego · Nos casamos</title>
+  <meta name="description" content="Sábado 17 de abril de 2027 · Tlaquepaque, Jalisco. Nos encantaría que nos acompañes." />
+  <meta name="theme-color" content="#f4eee3" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mariana & Diego · Nos casamos" />
+  <meta property="og:description" content="Sábado 17 de abril de 2027 · Tlaquepaque, Jalisco. Nos encantaría que nos acompañes." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (pareja ficticia). Fotos de Unsplash, uso libre.
+       Nombres, fecha, lugares, cuenta y WhatsApp están en invitacion.js.
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4
+       (los pases se crean fácil en pases.html). -->
+
+  <!-- ========== Sobre: lo primero que ve el invitado ========== -->
+  <div class="sobre" role="dialog" aria-modal="true" aria-labelledby="sobre-para">
+    <div class="sobre-inner">
+      <p class="sobre-kicker">Una invitación para</p>
+      <p class="sobre-para" id="sobre-para" data-invitado>Ti</p>
+      <div class="env-wrap">
+        <div class="env" aria-hidden="true">
+          <div class="env-back"></div>
+          <div class="env-card"><span>M <em>&</em> D</span><small>17 · 04 · 27</small></div>
+          <div class="env-front"></div>
+          <div class="env-flap"></div>
+        </div>
+        <button class="seal" type="button" data-abrir aria-label="Abrir la invitación">M<em>&</em>D</button>
+      </div>
+      <p class="sobre-hint">Toca el sello para abrir</p>
+    </div>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-img" src="assets/hero.jpg" alt="Mariana y Diego abrazados al atardecer" />
+      <div class="hero-text">
+        <p class="kicker">Nos casamos</p>
+        <h1 class="names">Mariana <em>&</em> Diego</h1>
+        <p class="hero-date">Sábado 17 de abril de 2027<span>Tlaquepaque, Jalisco</span></p>
+      </div>
+      <a class="scroll-cue" href="#pase" aria-label="Bajar"><i class="fa-solid fa-chevron-down"></i></a>
+    </section>
+
+    <!-- ========== Pase personal ========== -->
+    <section class="section" id="pase">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Con mucho cariño</p>
+        <p class="lead">Queremos que seas parte del día más importante de nuestra vida. Este pase es solo para ti.</p>
+        <div class="ticket">
+          <div class="ticket-main">
+            <small>Pase para</small>
+            <strong data-invitado>Invitado especial</strong>
+          </div>
+          <div class="ticket-side">
+            <strong data-pases>2</strong>
+            <small data-pases-txt>lugares</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="countdown">
+      <img src="assets/atardecer.jpg" alt="" loading="lazy" />
+      <div class="wrap center">
+        <p class="eyebrow">Faltan</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy es el gran día!</p>
+        <div class="cal-actions">
+          <a class="btn btn--light" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--light" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Historia ========== -->
+    <section class="section">
+      <div class="wrap story">
+        <div class="story-text">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2 class="h2">Siete años, dos ciudades <em>y un sí.</em></h2>
+          <p>Nos conocimos en la boda de unos amigos (sí, así empiezan estas historias). Desde entonces compartimos mudanzas, un perro llamado Tamal y la certeza de que queremos seguir juntos.</p>
+          <p>Ahora queremos celebrarlo con las personas que nos trajeron hasta aquí.</p>
+        </div>
+        <div class="story-photos">
+          <img src="assets/paseo.jpg" alt="Mariana y Diego paseando en otoño" loading="lazy" />
+          <img src="assets/manos.jpg" alt="Manos entrelazadas" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuándo y dónde ========== -->
+    <section class="section section--paper">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">Cuándo y dónde</p>
+          <h2 class="h2">El gran día</h2>
+        </div>
+        <div class="places">
+          <article class="place">
+            <i class="fa-solid fa-church"></i>
+            <p class="place-time">5:00 PM</p>
+            <h3 class="h3">Ceremonia religiosa</h3>
+            <p>Parroquia de San Pedro Apóstol<br />Independencia s/n, Centro, Tlaquepaque</p>
+            <a class="btn btn--line" href="https://maps.google.com/?q=Parroquia+San+Pedro+Apostol+Tlaquepaque" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Cómo llegar</a>
+          </article>
+          <article class="place">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <p class="place-time">7:00 PM</p>
+            <h3 class="h3">Recepción</h3>
+            <p>Hacienda Santa Lucía<br />Camino Real a Tlajomulco km 4</p>
+            <a class="btn btn--line" href="https://maps.google.com/?q=Tlajomulco+de+Zuniga+Jalisco" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Cómo llegar</a>
+          </article>
+        </div>
+
+        <ol class="timeline">
+          <li><time>5:00</time><span>Ceremonia</span></li>
+          <li><time>6:30</time><span>Cóctel de bienvenida</span></li>
+          <li><time>8:00</time><span>Cena</span></li>
+          <li><time>9:30</time><span>Primer baile</span></li>
+          <li><time>10:00</time><span>¡Fiesta!</span></li>
+          <li><time>2:00</time><span>Tornafiesta</span></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== Vestimenta ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Código de vestimenta</p>
+        <h2 class="h2">Formal</h2>
+        <p class="lead">Te sugerimos tonos tierra y cálidos. Por favor, evita el blanco y el color verde olivo (es de las damas).</p>
+        <ul class="swatches" aria-label="Colores sugeridos">
+          <li style="--c:#8a5a3b"><span>Canela</span></li>
+          <li style="--c:#b5823f"><span>Miel</span></li>
+          <li style="--c:#c9a98a"><span>Arena</span></li>
+          <li style="--c:#7d4a4a"><span>Vino</span></li>
+          <li style="--c:#3e4a5c"><span>Pizarra</span></li>
+        </ul>
+        <p class="note"><i class="fa-solid fa-heart"></i> Celebración solo para adultos</p>
+      </div>
+    </section>
+
+    <!-- ========== Regalos ========== -->
+    <section class="section section--paper">
+      <div class="wrap gifts">
+        <img class="gifts-img" src="assets/anillos.jpg" alt="Anillos de boda sobre un ramo de rosas" loading="lazy" />
+        <div>
+          <p class="eyebrow">Mesa de regalos</p>
+          <h2 class="h2">Tu presencia es <em>el mejor regalo.</em></h2>
+          <p>Si además quieres tener un detalle con nosotros, te dejamos estas opciones:</p>
+          <div class="gift">
+            <div><strong>Liverpool</strong><small>Evento 51234567</small></div>
+            <button class="copy" type="button" data-copy="51234567"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+          <div class="gift">
+            <div><strong>Transferencia</strong><small>BBVA · Mariana Torres<br />CLABE 0123 2000 1234 5678 90</small></div>
+            <button class="copy" type="button" data-copy="012320001234567890"><i class="fa-regular fa-copy"></i> Copiar</button>
+          </div>
+          <div class="gift">
+            <div><strong>Lluvia de sobres</strong><small>Habrá un buzón el día de la recepción</small></div>
+            <i class="fa-regular fa-envelope"></i>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Galería ========== -->
+    <section class="gallery" aria-label="Fotos">
+      <img src="assets/arco.jpg" alt="Mariana y Diego bajo un arco de tela" loading="lazy" />
+      <img src="assets/mesa.jpg" alt="Mesa larga con velas y flores" loading="lazy" />
+    </section>
+
+    <!-- ========== Confirmación ========== -->
+    <section class="section" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma tu asistencia</p>
+          <h2 class="h2">¿Nos acompañas?</h2>
+          <p class="lead">Por favor, confírmanos antes del <strong>15 de marzo</strong>.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Vienes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>¡Ahí estaré!</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré ir</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos asistirán?</span>
+            <select name="lugares"></select>
+          </label>
+          <label class="field" data-solo-si>
+            <span>Alergias o comida especial <small>(opcional)</small></span>
+            <input name="comida" maxlength="120" placeholder="Ej. vegetariano, sin nuez" />
+          </label>
+          <label class="field">
+            <span>Mensaje para los novios <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--gold" type="submit"><i class="fa-brands fa-whatsapp"></i> Enviar confirmación</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="hashtag">#MarianaYDiego</p>
+    <p>Comparte tus fotos con nuestro hashtag</p>
+    <a class="credit" href="../../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+</body>
+</html>

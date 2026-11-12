@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Pases de invitados · Mariana & Diego</title>
+  <meta name="robots" content="noindex" />
+  <meta name="theme-color" content="#f4eee3" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body>
+  <!-- Página para los novios (no se enlaza desde la invitación). Crea el enlace personal de cada
+       invitado y lo manda por WhatsApp. La lista se guarda solo en este navegador. -->
+  <main class="section">
+    <div class="wrap narrow">
+      <div class="center">
+        <p class="eyebrow">Solo para los novios</p>
+        <h1 class="h2">Pases de <em>invitados</em></h1>
+        <p class="lead">Escribe el nombre y cuántos lugares tiene. Cada invitado recibe su propio enlace, con su nombre en el sobre.</p>
+      </div>
+
+      <form class="rsvp" id="pase-form" novalidate>
+        <label class="field">
+          <span>Nombre en el pase</span>
+          <input name="nombre" required maxlength="60" placeholder="Ej. Familia López" autocomplete="off" />
+        </label>
+        <label class="field">
+          <span>Lugares</span>
+          <select name="lugares"></select>
+        </label>
+        <p class="form-error" hidden></p>
+        <button class="btn btn--gold" type="submit"><i class="fa-solid fa-plus"></i> Crear pase</button>
+      </form>
+
+      <div class="passes-head" hidden>
+        <h2 class="h3">Pases creados</h2>
+        <span data-total></span>
+      </div>
+      <ul class="passes" data-lista></ul>
+
+      <p class="center" style="margin-top: 40px"><a class="btn btn--line" href="./">Ver la invitación</a></p>
+    </div>
+  </main>
+
+  <script src="pases.js?v=1"></script>
+</body>
+</html>
