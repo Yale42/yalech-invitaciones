@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Bautizo de Mateo</title>
+  <meta name="description" content="Sábado 13 de marzo de 2027 · Querétaro. Acompáñanos en el bautizo de Mateo." />
+  <meta name="theme-color" content="#f3f6f1" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bautizo de Mateo" />
+  <meta property="og:description" content="Sábado 13 de marzo de 2027 · Querétaro. Acompáñanos en el bautizo de Mateo." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,300;1,9..144,400&family=Nunito+Sans:opsz,wght@6..12,300;6..12,400;6..12,600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (familia ficticia). Fotos de Unsplash, uso libre.
+       Fecha, lugares y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4 -->
+
+  <!-- ========== Entrada: telón con paloma que sube ========== -->
+  <div class="veil" data-intro role="dialog" aria-modal="true" aria-labelledby="veil-title">
+    <div class="veil-inner">
+      <i class="dove fa-solid fa-dove" aria-hidden="true"></i>
+      <p class="veil-kicker">Con mucha alegría</p>
+      <p class="veil-title" id="veil-title"><span data-invitado>Querida familia</span>, tenemos algo que contarte</p>
+      <button class="veil-btn" type="button" data-abrir>Abrir invitación</button>
+    </div>
+    <svg class="veil-wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0h1440v30c-120 30-240 46-360 46S840 50 720 34 480 4 360 4 120 30 0 46z" /></svg>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="hero-photo"><img src="assets/hero.jpg" alt="Bebé recibiendo el agua del bautizo con una concha" /></div>
+      <div class="hero-text">
+        <p class="kicker">Mi bautizo</p>
+        <h1 class="name">Mateo</h1>
+        <p class="hero-date">Sábado 13 de marzo de 2027<span>Querétaro, Qro.</span></p>
+      </div>
+    </section>
+
+    <!-- ========== Versículo y pase ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="verse">“El Señor te bendiga y te guarde; haga resplandecer su rostro sobre ti.”</p>
+        <p class="verse-ref">Números 6:24-25</p>
+        <div class="pass">
+          <i class="fa-solid fa-dove"></i>
+          <div><small>Invitación para</small><strong data-invitado>Ti y tu familia</strong></div>
+          <span class="pass-num"><strong data-pases>2</strong> <span data-pases-txt>lugares</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Familia ========== -->
+    <section class="section section--soft">
+      <div class="wrap family">
+        <div class="family-card">
+          <p class="eyebrow">Mis papás</p>
+          <p class="person">Daniela Rojas</p>
+          <p class="person">Andrés Salgado</p>
+        </div>
+        <img class="family-img" src="assets/ropon.jpg" alt="Ropón blanco de bautizo" loading="lazy" />
+        <div class="family-card">
+          <p class="eyebrow">Mis padrinos</p>
+          <p class="person">Ana Ruiz</p>
+          <p class="person">Tomás Vega</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuándo y dónde ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">Cuándo y dónde</p>
+          <h2 class="h2">Acompáñanos</h2>
+        </div>
+        <div class="places">
+          <article class="place">
+            <span class="place-icon"><i class="fa-solid fa-church"></i></span>
+            <h3 class="h3">Ceremonia</h3>
+            <p class="place-time">12:00 PM</p>
+            <p>Templo de San Francisco<br />Av. Madero 2, Centro, Querétaro</p>
+            <a class="link" href="https://maps.google.com/?q=Templo+de+San+Francisco+Queretaro" target="_blank" rel="noopener">Cómo llegar <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="place">
+            <span class="place-icon"><i class="fa-solid fa-utensils"></i></span>
+            <h3 class="h3">Comida</h3>
+            <p class="place-time">2:30 PM</p>
+            <p>Quinta Los Fresnos<br />Camino a Hércules 118, Querétaro</p>
+            <a class="link" href="https://maps.google.com/?q=Hercules+Queretaro" target="_blank" rel="noopener">Cómo llegar <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="section section--sky">
+      <div class="wrap center">
+        <p class="eyebrow" data-clock-label>Faltan</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy es el gran día!</p>
+        <div class="cal-actions">
+          <a class="btn btn--white" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--white" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Detalles ========== -->
+    <section class="section">
+      <div class="wrap details">
+        <div class="detail">
+          <i class="fa-solid fa-shirt"></i>
+          <h3 class="h3">Vestimenta</h3>
+          <p>Casual elegante, de preferencia en colores claros.</p>
+        </div>
+        <div class="detail">
+          <i class="fa-solid fa-gift"></i>
+          <h3 class="h3">Regalos</h3>
+          <p>Tu cariño es el mejor regalo. Si deseas, habrá lluvia de sobres.</p>
+        </div>
+        <div class="detail">
+          <i class="fa-solid fa-children"></i>
+          <h3 class="h3">Niños</h3>
+          <p>¡Bienvenidos! Habrá área de juegos en la comida.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Confirmación ========== -->
+    <section class="section section--soft" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma tu asistencia</p>
+          <h2 class="h2">¿Nos acompañas?</h2>
+          <p class="lead">Avísanos antes del <strong>1 de marzo</strong> para apartar tu lugar.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Vienes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>Sí, ahí estaré</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos asistirán?</span>
+            <select name="lugares"></select>
+          </label>
+          <label class="field">
+            <span>Unas palabras para Mateo <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--sage" type="submit"><i class="fa-brands fa-whatsapp"></i> Confirmar asistencia</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <i class="dove dove--small fa-solid fa-dove" aria-hidden="true"></i>
+    <p class="footer-name">Mateo</p>
+    <p>Con amor, Daniela y Andrés</p>
+    <a class="credit" href="../../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+  <script src="../comun.js?v=1"></script>
+</body>
+</html>

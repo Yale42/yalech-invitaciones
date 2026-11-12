@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Mis XV años · Valentina</title>
+  <meta name="description" content="Sábado 26 de junio de 2027 · Puebla. Acompáñame a celebrar mis XV años." />
+  <meta name="theme-color" content="#1f0d18" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Mis XV años · Valentina" />
+  <meta property="og:description" content="Sábado 26 de junio de 2027 · Puebla. Acompáñame a celebrar mis XV años." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (quinceañera ficticia). Fotos de Unsplash, uso libre.
+       Fecha, lugares y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4 -->
+
+  <!-- ========== Entrada: pase VIP que gira ========== -->
+  <div class="vip-screen" data-intro role="dialog" aria-modal="true" aria-labelledby="vip-title">
+    <div class="sparkles" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="vip-kicker" id="vip-title">Tienes un pase VIP</p>
+    <div class="vip" data-abrir aria-hidden="true">
+      <div class="vip-face vip-front">
+        <span class="vip-tag">VIP</span>
+        <span class="vip-xv">XV</span>
+        <span class="vip-name">Valentina</span>
+        <span class="vip-line"></span>
+        <small>Pase para</small>
+        <strong data-invitado>Ti</strong>
+        <span class="vip-meta"><span data-pases>2</span> <span data-pases-txt>lugares</span> · 26.06.27</span>
+      </div>
+      <div class="vip-face vip-back">
+        <span class="vip-xv">XV</span>
+        <span class="vip-name">¡Bienvenidos!</span>
+      </div>
+    </div>
+    <button class="vip-btn" type="button" data-abrir>Abrir invitación <i class="fa-solid fa-arrow-right"></i></button>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <img class="hero-img" src="assets/hero.jpg" alt="Valentina con vestido rosa y tiara" />
+      <div class="hero-text">
+        <p class="kicker">Mis XV años</p>
+        <h1 class="name">Valentina</h1>
+        <p class="hero-date"><span>Sábado</span> 26 · junio · 2027 <span>Puebla, Pue.</span></p>
+      </div>
+    </section>
+
+    <!-- ========== Frase y pase ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="quote">“Hay momentos que se viven una sola vez. <em>Este es uno de ellos,</em> y quiero vivirlo contigo.”</p>
+        <div class="pass">
+          <div>
+            <small>Este pase es para</small>
+            <strong data-invitado>Invitado especial</strong>
+          </div>
+          <div class="pass-num"><strong data-pases>2</strong><small data-pases-txt>lugares</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="section section--deep">
+      <div class="wrap center">
+        <p class="eyebrow" data-clock-label>La cuenta regresiva</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy es el gran día!</p>
+        <div class="cal-actions">
+          <a class="btn btn--ghost" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--ghost" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Familia ========== -->
+    <section class="section">
+      <div class="wrap family">
+        <img class="family-img" src="assets/vestido.jpg" alt="Detalle del vestido dorado y el ramo" loading="lazy" />
+        <div>
+          <p class="eyebrow">Con la bendición de Dios y de mis padres</p>
+          <ul class="people">
+            <li><small>Mis papás</small><strong>Laura Méndez</strong><strong>Ricardo Ortiz</strong></li>
+            <li><small>Mis padrinos</small><strong>Sofía Ortiz</strong><strong>Javier Luna</strong></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuándo y dónde ========== -->
+    <section class="section section--deep">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">Cuándo y dónde</p>
+          <h2 class="h2">Te espero</h2>
+        </div>
+        <div class="places">
+          <article class="place">
+            <span class="place-time">6:00 PM</span>
+            <h3 class="h3">Misa de acción de gracias</h3>
+            <p>Templo de Santo Domingo<br />5 de Mayo 407, Centro Histórico</p>
+            <a class="btn btn--line" href="https://maps.google.com/?q=Templo+de+Santo+Domingo+Puebla" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Cómo llegar</a>
+          </article>
+          <article class="place">
+            <span class="place-time">8:30 PM</span>
+            <h3 class="h3">Recepción</h3>
+            <p>Jardín Las Magnolias<br />Av. Juárez 2915, La Paz</p>
+            <a class="btn btn--line" href="https://maps.google.com/?q=Avenida+Juarez+La+Paz+Puebla" target="_blank" rel="noopener"><i class="fa-solid fa-location-dot"></i> Cómo llegar</a>
+          </article>
+        </div>
+        <ol class="program">
+          <li><time>8:30</time>Recepción</li>
+          <li><time>9:15</time>Entrada y vals</li>
+          <li><time>9:45</time>Baile sorpresa</li>
+          <li><time>10:15</time>Cena</li>
+          <li><time>11:00</time>¡A bailar!</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== Vestimenta ========== -->
+    <section class="section section--blush">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Código de vestimenta</p>
+        <h2 class="h2">Etiqueta</h2>
+        <p class="lead">Vestido largo y traje oscuro. El <strong>rosa</strong> está reservado para la quinceañera.</p>
+        <div class="dress-icons" aria-hidden="true"><i class="fa-solid fa-person-dress"></i><i class="fa-solid fa-user-tie"></i></div>
+      </div>
+    </section>
+
+    <!-- ========== Regalos ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Regalos</p>
+        <h2 class="h2">Lluvia de sobres</h2>
+        <p class="lead">Tu compañía es lo más importante. Si deseas hacerme un regalo, habrá un buzón en la recepción.</p>
+        <div class="gift">
+          <div><strong>Liverpool</strong><small>Evento 50987654</small></div>
+          <button class="copy" type="button" data-copy="50987654"><i class="fa-regular fa-copy"></i> Copiar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Galería ========== -->
+    <section class="gallery" aria-label="Fotos">
+      <img src="assets/jardin.jpg" alt="Valentina en el jardín" loading="lazy" />
+      <img src="assets/vestido.jpg" alt="Detalle del vestido" loading="lazy" />
+    </section>
+
+    <!-- ========== Confirmación ========== -->
+    <section class="section section--deep" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma tu asistencia</p>
+          <h2 class="h2">¿Vienes a mi fiesta?</h2>
+          <p class="lead">Confírmame antes del <strong>1 de junio</strong>, porfa.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Asistirás?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>¡Claro que sí!</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos asistirán?</span>
+            <select name="lugares"></select>
+          </label>
+          <label class="field">
+            <span>Un mensaje para Valentina <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--rose" type="submit"><i class="fa-brands fa-whatsapp"></i> Confirmar</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="hashtag">#XVValentina</p>
+    <p>Etiquétame en tus fotos y videos</p>
+    <a class="credit" href="../../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+  <script src="../comun.js?v=1"></script>
+</body>
+</html>

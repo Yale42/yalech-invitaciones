@@ -25,17 +25,17 @@
 </head>
 <body class="is-locked">
   <!-- Invitación de ejemplo (pareja ficticia). Fotos de Unsplash, uso libre.
-       Nombres, fecha, lugares, cuenta y WhatsApp están en invitacion.js.
+       Nombres, fecha, lugares y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
        Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4
        (los pases se crean fácil en pases.html). -->
 
   <!-- ========== Sobre: lo primero que ve el invitado ========== -->
-  <div class="sobre" role="dialog" aria-modal="true" aria-labelledby="sobre-para">
+  <div class="sobre" data-intro role="dialog" aria-modal="true" aria-labelledby="sobre-para">
     <div class="sobre-inner">
       <p class="sobre-kicker">Una invitación para</p>
       <p class="sobre-para" id="sobre-para" data-invitado>Ti</p>
       <div class="env-wrap">
-        <div class="env" aria-hidden="true">
+        <div class="env" data-abrir aria-hidden="true">
           <div class="env-back"></div>
           <div class="env-card"><span>M <em>&</em> D</span><small>17 · 04 · 27</small></div>
           <div class="env-front"></div>
@@ -81,7 +81,7 @@
     <section class="countdown">
       <img src="assets/atardecer.jpg" alt="" loading="lazy" />
       <div class="wrap center">
-        <p class="eyebrow">Faltan</p>
+        <p class="eyebrow" data-clock-label>Faltan</p>
         <div class="clock" data-clock>
           <div><strong data-u="d">000</strong><small>días</small></div>
           <div><strong data-u="h">00</strong><small>horas</small></div>
@@ -241,6 +241,7 @@
   </footer>
 
   <script src="../../assets/motion.js"></script>
-  <script src="invitacion.js?v=1"></script>
+  <script src="invitacion.js?v=2"></script>
+  <script src="../comun.js?v=1"></script>
 </body>
 </html>
