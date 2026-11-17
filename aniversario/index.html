@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Bodas de oro · Rosa &amp; Ernesto · 50 años</title>
+  <meta name="description" content="Sábado 22 de mayo de 2027 · Guadalajara. Celebramos 50 años de casados de Rosa y Ernesto." />
+  <meta name="theme-color" content="#4a1424" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Bodas de oro · Rosa &amp; Ernesto · 50 años" />
+  <meta property="og:description" content="Sábado 22 de mayo de 2027 · Guadalajara. Celebramos 50 años de casados de Rosa y Ernesto." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (pareja ficticia). Ilustrada con CSS: no usa fotos.
+       Fecha, lugar y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4 -->
+
+  <!-- ========== Entrada: disco que sale de su funda ========== -->
+  <div class="vinyl" data-intro role="dialog" aria-modal="true" aria-labelledby="vinyl-title">
+    <p class="vinyl-kicker" id="vinyl-title">Tienes una invitación</p>
+    <button class="record" type="button" data-abrir aria-label="Sacar el disco para abrir la invitación">
+      <span class="disc" aria-hidden="true"><span class="disc-label">R <i>&amp;</i> E</span></span>
+      <span class="sleeve" aria-hidden="true">
+        <small>Lado A · 1977</small>
+        <b>Rosa<br /><i>&amp;</i> Ernesto</b>
+        <small>Lado B · 2027</small>
+      </span>
+    </button>
+    <p class="vinyl-hint">Toca para poner el disco</p>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="hero-text">
+        <p class="kicker">Bodas de oro</p>
+        <p class="fifty" aria-label="50">50</p>
+        <p class="years">años juntos</p>
+        <h1 class="title">Rosa <i>&amp;</i> Ernesto</h1>
+        <p class="hero-date">Sábado 22 de mayo de 2027 · Guadalajara</p>
+      </div>
+    </section>
+
+    <!-- ========== Mensaje y pase ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="quote">“Nos casamos un 22 de mayo de 1977 con más ilusión que dinero. Cincuenta años, tres hijos y siete nietos después, queremos celebrarlo con quienes hicieron este camino más bonito.”</p>
+        <p class="quote-by">— Rosa y Ernesto</p>
+        <div class="place">
+          <p class="place-top">Mesa de honor</p>
+          <p class="place-name" data-invitado>Invitado especial</p>
+          <p class="place-seats"><span data-pases>2</span> <span data-pases-txt>lugares</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Historia ========== -->
+    <section class="section section--wine">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Nuestra historia</p>
+          <h2 class="h2">Medio siglo, en canciones</h2>
+        </div>
+        <ol class="tracks">
+          <li><span class="track-n">1975</span><div><strong>Un baile en el kiosco</strong><span>Él no sabía bailar. Ella le enseñó.</span></div></li>
+          <li><span class="track-n">1977</span><div><strong>El sí, en San Francisco</strong><span>Templo lleno y una lluvia que nadie olvida.</span></div></li>
+          <li><span class="track-n">1980</span><div><strong>Llegan Claudia, Jorge y Paty</strong><span>Tres hijos en seis años. ¡Valientes!</span></div></li>
+          <li><span class="track-n">2005</span><div><strong>Abuelos por primera vez</strong><span>Hoy son siete nietos y contando.</span></div></li>
+          <li class="is-now"><span class="track-n">2027</span><div><strong>50 años</strong><span>Y siguen bailando la misma canción.</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ========== Programa ========== -->
+    <section class="section">
+      <div class="wrap">
+        <div class="center">
+          <p class="eyebrow">El programa</p>
+          <h2 class="h2">Acompáñanos</h2>
+        </div>
+        <div class="program">
+          <article class="stop">
+            <i class="fa-solid fa-church"></i>
+            <p class="stop-time">6:00 PM</p>
+            <h3>Misa de acción de gracias</h3>
+            <p>Templo de San Francisco. Av. 16 de Septiembre 289, Centro, Guadalajara.</p>
+            <a class="link" href="https://maps.google.com/?q=Templo+de+San+Francisco+Guadalajara" target="_blank" rel="noopener">Cómo llegar <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="stop">
+            <i class="fa-solid fa-champagne-glasses"></i>
+            <p class="stop-time">8:00 PM</p>
+            <h3>Cena y baile</h3>
+            <p>Hacienda Los Arcos. Camino Real a Colima 450, Tlaquepaque.</p>
+            <a class="link" href="https://maps.google.com/?q=Tlaquepaque+Jalisco" target="_blank" rel="noopener">Cómo llegar <i class="fa-solid fa-arrow-right"></i></a>
+          </article>
+          <article class="stop">
+            <i class="fa-solid fa-ring"></i>
+            <p class="stop-time">9:00 PM</p>
+            <h3>Renovación de votos y vals</h3>
+            <p>Con la misma canción de 1977: <em>“Contigo aprendí”</em>.</p>
+          </article>
+        </div>
+        <p class="gift-note"><i class="fa-solid fa-envelope-open-text"></i> Tu presencia es el mejor regalo. Si quieres tener un detalle, habrá una caja para sobres.</p>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="section section--cream">
+      <div class="wrap center">
+        <p class="eyebrow" data-clock-label>Faltan</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy celebramos 50 años!</p>
+        <div class="cal-actions">
+          <a class="btn btn--wine" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--line" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Confirmación ========== -->
+    <section class="section" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma</p>
+          <h2 class="h2">¿Nos acompañas?</h2>
+          <p class="lead">Confírmanos antes del <strong>8 de mayo</strong>. Y pide la canción que no puede faltar: el DJ ya tiene la lista.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Vienes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>Con mucho gusto</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos vienen?</span>
+            <select name="lugares"></select>
+          </label>
+          <label class="field" data-solo-si>
+            <span>Canción que no puede faltar <small>(opcional)</small></span>
+            <input name="comida" maxlength="80" placeholder="Ej. Bésame mucho" />
+          </label>
+          <label class="field">
+            <span>Unas palabras para Rosa y Ernesto <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400" placeholder="Gracias por enseñarnos lo que es el amor…"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--wine" type="submit"><i class="fa-brands fa-whatsapp"></i> Confirmar</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-title">Cincuenta años<br /><i>y contando.</i></p>
+    <p>Rosa, Ernesto y familia</p>
+    <a class="credit" href="../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+  <script src="../comun.js?v=2"></script>
+</body>
+</html>

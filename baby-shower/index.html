@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Baby shower de Ana · ¡Ya viene Emilia!</title>
+  <meta name="description" content="Sábado 13 de marzo de 2027 · 12:00 PM · Mérida. Acompáñanos a celebrar la llegada de Emilia." />
+  <meta name="theme-color" content="#8fae9a" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Baby shower de Ana · ¡Ya viene Emilia!" />
+  <meta property="og:description" content="Sábado 13 de marzo de 2027 · 12:00 PM · Mérida. Acompáñanos a celebrar la llegada de Emilia." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,500&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (familia ficticia). Ilustrada con CSS: no usa fotos.
+       Fecha, lugar y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4 -->
+
+  <!-- ========== Entrada: raspadita con el nombre ========== -->
+  <div class="scratch" data-intro role="dialog" aria-modal="true" aria-labelledby="scratch-title">
+    <p class="scratch-kicker">Baby shower</p>
+    <h2 class="scratch-title" id="scratch-title">Raspa para conocer<br />mi nombre</h2>
+    <div class="ticket">
+      <div class="ticket-prize" aria-live="polite">
+        <span class="ticket-small">Me llamo</span>
+        <strong class="ticket-name">Emilia</strong>
+        <span class="ticket-hearts" aria-hidden="true">♥ ♥ ♥</span>
+      </div>
+      <canvas class="ticket-cover" data-raspa aria-hidden="true"></canvas>
+    </div>
+    <p class="scratch-hint" data-raspa-hint>Pasa el dedo por la tarjeta ✨</p>
+    <button class="btn btn--sage scratch-go" type="button" data-abrir hidden>Ver invitación <i class="fa-solid fa-arrow-down"></i></button>
+    <button class="scratch-skip" type="button" data-revelar>Descubrir sin raspar</button>
+  </div>
+  <div class="hearts" aria-hidden="true"></div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <div class="mobile" aria-hidden="true">
+        <span class="mobile-bar"></span>
+        <span class="hang hang--a"><i class="fa-solid fa-cloud"></i></span>
+        <span class="hang hang--b"><i class="fa-solid fa-moon"></i></span>
+        <span class="hang hang--c"><i class="fa-solid fa-star"></i></span>
+        <span class="hang hang--d"><i class="fa-solid fa-heart"></i></span>
+      </div>
+      <div class="hero-text">
+        <p class="kicker">Baby shower</p>
+        <h1 class="title">Ya viene<br /><em>Emilia</em></h1>
+        <p class="hero-sub">Celebremos juntos su llegada</p>
+        <p class="hero-date">Sábado 13 de marzo · 12:00 PM</p>
+      </div>
+    </section>
+
+    <!-- ========== Pase: pulserita de hospital ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="intro-text">Ana y Luis estamos contando los días para conocer a nuestra bebé, y nos encantaría que nos acompañes a celebrarla.</p>
+        <div class="band">
+          <span class="band-clip" aria-hidden="true"></span>
+          <div class="band-body">
+            <small>Pase para</small>
+            <strong data-invitado>Invitado especial</strong>
+            <span><b data-pases>2</b> <span data-pases-txt>lugares</span></span>
+          </div>
+          <span class="band-dots" aria-hidden="true"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Ficha de la bebé ========== -->
+    <section class="section section--blush">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Su ficha</p>
+          <h2 class="h2">Conoce a Emilia</h2>
+        </div>
+        <dl class="ficha">
+          <div><dt><i class="fa-regular fa-calendar"></i> Llega</dt><dd>Mediados de abril</dd></div>
+          <div><dt><i class="fa-solid fa-person-breastfeeding"></i> Mamá y papá</dt><dd>Ana &amp; Luis</dd></div>
+          <div><dt><i class="fa-solid fa-heart"></i> Ya la quieren</dt><dd>2 abuelas, 3 tías y un perro</dd></div>
+          <div><dt><i class="fa-solid fa-music"></i> Le gusta</dt><dd>Patear cuando suena cumbia</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ========== Lluvia de pañales ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">Lluvia de pañales</p>
+        <h2 class="h2">¿Qué talla llevo?</h2>
+        <p class="lead">Para que no lleguen puros recién nacido, va según tu apellido.</p>
+        <div class="talla">
+          <label class="field">
+            <span>Tu primer apellido</span>
+            <input data-apellido maxlength="40" placeholder="Ej. López" autocomplete="family-name" />
+          </label>
+          <p class="talla-out" data-talla aria-live="polite">Escríbelo y te digo 👶</p>
+        </div>
+        <ul class="tallas">
+          <li><b>A – F</b><span>Etapa 1</span></li>
+          <li><b>G – M</b><span>Etapa 2</span></li>
+          <li><b>N – S</b><span>Etapa 3</span></li>
+          <li><b>T – Z</b><span>Etapa 4</span></li>
+        </ul>
+        <div class="gift">
+          <i class="fa-solid fa-gift"></i>
+          <div>
+            <strong>Mesa de regalos</strong>
+            <span>Liverpool · Evento 51234567</span>
+          </div>
+          <button class="btn btn--line" type="button" data-copy="51234567"><i class="fa-regular fa-copy"></i> Copiar</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="section section--sage">
+      <div class="wrap center">
+        <p class="eyebrow" data-clock-label>Faltan</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy es el baby shower! 🍼</p>
+        <div class="cal-actions">
+          <a class="btn btn--light" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--light" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Dónde ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">El lugar</p>
+        <h2 class="h2">¿Dónde es?</h2>
+        <div class="where">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Jardín Las Palmas</strong>
+            <span>Calle 60 #312, Col. Alcalá Martín, Mérida</span>
+            <span>Sábado 13 de marzo · 12:00 a 4:00 PM</span>
+          </div>
+        </div>
+        <a class="btn btn--sage" href="https://maps.google.com/?q=Alcala+Martin+Merida+Yucatan" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Cómo llegar</a>
+      </div>
+    </section>
+
+    <!-- ========== Confirmación + apuesta ========== -->
+    <section class="section section--blush" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma y juega</p>
+          <h2 class="h2">¿Nos acompañas?</h2>
+          <p class="lead">Confírmanos antes del <strong>6 de marzo</strong>. Y haz tu apuesta: quien más le atine se lleva un premio.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Vienes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>¡Sí, ahí estaré!</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos vienen?</span>
+            <select name="lugares"></select>
+          </label>
+          <fieldset class="field bet" data-solo-si>
+            <legend>Tu apuesta <small>(opcional)</small></legend>
+            <div class="bet-row">
+              <label><span>¿Qué día nace?</span><input type="date" data-apuesta-dia min="2027-03-20" max="2027-05-10" /></label>
+              <label><span>¿Cuánto pesa?</span>
+                <select data-apuesta-peso>
+                  <option value="">Elige</option>
+                  <option>2.5 kg</option><option>2.8 kg</option><option>3.0 kg</option><option>3.2 kg</option><option>3.4 kg</option><option>3.6 kg</option><option>3.8 kg o más</option>
+                </select>
+              </label>
+            </div>
+            <input type="hidden" name="comida" />
+          </fieldset>
+          <label class="field">
+            <span>Un consejo para los papás <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400" placeholder="Duerman ahora que pueden…"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--sage" type="submit"><i class="fa-brands fa-whatsapp"></i> Confirmar</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-title">Con amor,<br /><em>Ana, Luis y Emilia</em></p>
+    <a class="credit" href="../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+  <script src="../comun.js?v=2"></script>
+</body>
+</html>

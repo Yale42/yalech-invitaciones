@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Invitaciones digitales · @yalech</title>
+  <meta name="description" content="Invitaciones digitales con pase personal y confirmación por WhatsApp: bodas, XV años, posadas, baby shower, graduaciones y más. Ejemplos en vivo por Yael González." />
+  <meta name="theme-color" content="#f5f0e8" />
+
+  <!-- Vista previa al compartir. Al publicar, cambia la ruta por la URL completa
+       (ej. https://tudominio.com/assets/plantillas/invitacion-boda.jpg): WhatsApp y Facebook la necesitan así. -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Invitaciones digitales · @yalech" />
+  <meta property="og:description" content="Cada invitado recibe su pase con su nombre y confirma por WhatsApp. Mira los ejemplos en vivo." />
+  <meta property="og:image" content="assets/plantillas/invitacion-boda.jpg" />
+  <meta property="og:image:width" content="540" />
+  <meta property="og:image:height" content="1169" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="estilos.css?v=1" />
+  <link rel="stylesheet" href="assets/cotizar.css?v=1" />
+  <link rel="stylesheet" href="assets/carrusel.css?v=2" />
+</head>
+<body>
+  <!-- Ejemplos de invitaciones digitales de yalech. Cada invitación vive en su carpeta (boda/, xv/, posada/…)
+       y comparte la lógica de comun.js (pase personal, cuenta regresiva, calendario y confirmación).
+       El catálogo completo y el link en bio están en otro repositorio: cambia los enlaces
+       https://yale42.github.io/yalech-web-link-in-bio/ por tu dominio cuando lo tengas. -->
+  <nav class="topbar">
+    <a class="back" href="https://yale42.github.io/yalech-web-link-in-bio/pages/yalech/" aria-label="Ir a @yalech"><i class="fa-solid fa-arrow-left"></i><span class="back-avatar" aria-hidden="true">YG</span>@yalech</a>
+  </nav>
+
+  <header class="intro">
+    <p class="kicker">Invitaciones digitales · por Yael González</p>
+    <h1 class="title">Una invitación que <em>se abre como regalo.</em></h1>
+    <p class="lead">Cada invitado recibe su propio enlace con su nombre y sus lugares, confirma por WhatsApp en un toque y guarda la fecha en su calendario. Sin papel, sin apps. Toca un ejemplo y ábrelo.</p>
+    <ol class="how">
+      <li><strong>Elige</strong></li>
+      <li><strong>La adapto</strong></li>
+      <li><strong>La compartes</strong></li>
+    </ol>
+    <p class="help">¿Necesitas otra cosa? <a href="https://yale42.github.io/yalech-web-link-in-bio/">Mira el catálogo completo <span aria-hidden="true">→</span></a></p>
+  </header>
+
+  <section class="category" id="grandes-eventos">
+    <div class="category-head">
+      <div><h2>Grandes eventos</h2><p class="category-sub">Bodas, XV años, aniversarios y graduaciones.</p></div>
+      <p class="swipe-hint">Desliza para ver más →</p>
+    </div>
+    <div class="grid">
+      <article class="item">
+        <a class="phone" href="boda/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de boda en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-boda.jpg" alt="Invitación de boda con sobre y sello" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-boda.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">Boda</h3>
+          <p class="item-for">Bodas y civiles</p>
+          <p class="item-desc">Cada invitado recibe su pase con su nombre.</p>
+          <ul class="chips"><li>Sobre animado</li><li>Pase personal</li><li>Confirmación</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="boda/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Boda" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20boda" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="xv/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de xv años en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-xv.jpg" alt="Invitación de XV años con pase VIP" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-xv.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">XV años</h3>
+          <p class="item-for">Quinceañeras</p>
+          <p class="item-desc">Un pase VIP que gira al abrirse.</p>
+          <ul class="chips"><li>Pase VIP</li><li>Padres y padrinos</li><li>Vals</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="xv/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="XV años" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20xv%20a%C3%B1os" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="aniversario/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de bodas de oro en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-aniversario.jpg" alt="Invitación de bodas de oro con disco de vinilo" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-aniversario.webp" /></span>
+        </a>
+        <div class="item-info">
+          <span class="tag-new">Nueva</span><h3 class="item-name">Bodas de oro</h3>
+          <p class="item-for">Aniversarios de plata y oro</p>
+          <p class="item-desc">Un disco sale de su funda y empieza a girar.</p>
+          <ul class="chips"><li>Disco animado</li><li>Su historia</li><li>Piden canción</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="aniversario/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Aniversario" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20aniversario" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="graduacion/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de graduación en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-graduacion.jpg" alt="Invitación de graduación con diploma" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-graduacion.webp" /></span>
+        </a>
+        <div class="item-info">
+          <span class="tag-new">Nueva</span><h3 class="item-name">Graduación</h3>
+          <p class="item-for">Graduaciones y titulaciones</p>
+          <p class="item-desc">El diploma se desenrolla con su nombre.</p>
+          <ul class="chips"><li>Diploma animado</li><li>Ceremonia y fiesta</li><li>Elige a cuál va</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="graduacion/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Graduación" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20graduaci%C3%B3n" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="category" id="fiestas">
+    <div class="category-head">
+      <div><h2>Fiestas en familia</h2><p class="category-sub">Posadas, baby shower, bautizos y cumpleaños.</p></div>
+      <p class="swipe-hint">Desliza para ver más →</p>
+    </div>
+    <div class="grid">
+      <article class="item">
+        <a class="phone" href="posada/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de posada en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-posada.jpg" alt="Invitación de posada con piñata de siete picos" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-posada.webp" /></span>
+        </a>
+        <div class="item-info">
+          <span class="tag-new">De temporada</span><h3 class="item-name">Posada</h3>
+          <p class="item-for">Posadas y fiestas de fin de año</p>
+          <p class="item-desc">Le pegan tres veces a la piñata y caen dulces.</p>
+          <ul class="chips"><li>Piñata</li><li>Qué llevar</li><li>Intercambio</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="posada/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Posada" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20posada" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="baby-shower/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de baby shower en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-baby-shower.jpg" alt="Invitación de baby shower con raspadita" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-baby-shower.webp" /></span>
+        </a>
+        <div class="item-info">
+          <span class="tag-new">Nueva</span><h3 class="item-name">Baby shower</h3>
+          <p class="item-for">Baby shower y revelaciones</p>
+          <p class="item-desc">Raspan la tarjeta para descubrir el nombre.</p>
+          <ul class="chips"><li>Raspadita</li><li>Talla de pañales</li><li>Apuestas</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="baby-shower/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Baby shower" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20baby%20shower" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="bautizo/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de bautizo en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-bautizo.jpg" alt="Invitación de bautizo con paloma" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-bautizo.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">Bautizo</h3>
+          <p class="item-for">Bautizos y primeras comuniones</p>
+          <p class="item-desc">Suave y luminosa, con padrinos y misa.</p>
+          <ul class="chips"><li>Telón con paloma</li><li>Padrinos</li><li>Misa y comida</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="bautizo/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Bautizo" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20bautizo" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+      <article class="item">
+        <a class="phone" href="cumple/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener" aria-label="Ver invitación de cumpleaños infantil en vivo">
+          <span class="screen"><img src="assets/plantillas/invitacion-cumple.jpg" alt="Invitación de cumpleaños infantil con globo" loading="lazy" width="540" height="1169" data-tall="assets/plantillas/largas/invitacion-cumple.webp" /></span>
+        </a>
+        <div class="item-info">
+          <h3 class="item-name">Cumpleaños infantil</h3>
+          <p class="item-for">Fiestas de niños</p>
+          <p class="item-desc">Revientan el globo y sale confeti.</p>
+          <ul class="chips"><li>Globo con confeti</li><li>Boleto de abordaje</li><li>Ilustrada</li></ul>
+          <div class="item-actions">
+            <a class="btn" href="cumple/?n=Familia%20L%C3%B3pez&amp;p=4" target="_blank" rel="noopener">Ver en vivo</a>
+            <a class="btn btn--solid" data-cotizar="invitacion" data-ejemplo="Cumpleaños infantil" href="https://wa.me/520000000000?text=Hola%20Yael%2C%20quiero%20una%20invitaci%C3%B3n%20digital%20de%20cumplea%C3%B1os%20infantil" target="_blank" rel="noopener">La quiero</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="tool">
+    <div class="tool-ico" aria-hidden="true"><i class="fa-solid fa-ticket"></i></div>
+    <div>
+      <h2 class="tool-title">Tú mandas los pases</h2>
+      <p class="tool-text">Escribes el nombre de cada familia y cuántos lugares tiene, y sale su enlace listo para mandar por WhatsApp. Nadie se cuela con más lugares.</p>
+      <a class="btn" href="boda/pases.html" target="_blank" rel="noopener">Probar el generador de pases <span aria-hidden="true">→</span></a>
+    </div>
+  </section>
+
+  <section class="why">
+    <h2 class="why-title">¿Qué trae cada invitación?</h2>
+    <ul class="why-list">
+      <li><strong>Pase con su nombre</strong><span>Y los lugares que le tocan.</span></li>
+      <li><strong>Confirmación por WhatsApp</strong><span>Te llega directo, sin formularios raros.</span></li>
+      <li><strong>Cuenta regresiva</strong><span>Y botón para guardarla en su calendario.</span></li>
+      <li><strong>Cómo llegar</strong><span>El mapa a un toque, para cada lugar.</span></li>
+      <li><strong>Una entrada que sorprende</strong><span>Sobre, piñata, globo, disco o diploma.</span></li>
+      <li><strong>Pago único</strong><span>Sin mensualidades ni comisiones.</span></li>
+    </ul>
+  </section>
+
+  <footer class="outro">
+    <p class="outro-text">¿Tienes un evento pronto? <em>Hagamos tu invitación.</em></p>
+    <a class="btn btn--solid btn--big" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20cotizar%20una%20invitaci%C3%B3n%20digital" target="_blank" rel="noopener" data-cotizar="invitacion">Cotiza en 1 minuto</a>
+    <a class="outro-alt" href="https://yale42.github.io/yalech-web-link-in-bio/">o mira todos mis servicios</a>
+    <p class="outro-sign">Yael González · 2026</p>
+  </footer>
+
+  <a class="float-quote" href="https://wa.me/520000000000?text=Hola%20Yael,%20quiero%20cotizar%20una%20invitaci%C3%B3n%20digital" target="_blank" rel="noopener" data-cotizar="invitacion"><i class="fa-solid fa-bolt"></i> Cotiza en 1 minuto</a>
+
+  <script src="assets/motion.js"></script>
+  <script src="assets/cotizar.js?v=2"></script>
+  <script src="assets/carrusel.js?v=1"></script>
+  <script>
+    // Carrusel de ejemplos: flechas, puntitos y una probadita para que se note que se desliza
+    document.querySelectorAll('.category .grid').forEach(g => carrusel(g));
+
+    // Aparecen al bajar
+    motion.reveal('.category-head, .tool, .why-title, .outro-text, .outro .btn');
+    motion.stagger('.grid, .why-list');
+
+    // Botón flotante: aparece al pasar la presentación y se esconde al llegar al cierre
+    const flotante = document.querySelector('.float-quote');
+    const intro = document.querySelector('.intro');
+    const cierre = document.querySelector('.outro');
+    const verFlotante = () => {
+      const pasado = intro.getBoundingClientRect().bottom < 0;
+      const alFinal = cierre.getBoundingClientRect().top < innerHeight;
+      flotante.classList.toggle('show', pasado && !alFinal);
+    };
+    addEventListener('scroll', verFlotante, { passive: true });
+    verFlotante();
+
+    // Celular de muestra: al pasar el mouse (o al verlo en el celular) recorre la página completa.
+    // Las capturas largas están en assets/plantillas/largas y se cargan solo cuando la tarjeta está cerca.
+    const phones = document.querySelectorAll('.phone');
+    const medir = phone => {
+      const img = phone.querySelector('img');
+      const extra = img.offsetHeight - phone.querySelector('.screen').clientHeight;
+      phone.style.setProperty('--shift', -Math.max(extra, 0) + 'px');
+      phone.style.setProperty('--dur', Math.max(extra / 160, 2).toFixed(1) + 's');
+    };
+    const cargar = new IntersectionObserver(entries => entries.forEach(e => {
+      if (!e.isIntersecting) return;
+      cargar.unobserve(e.target);
+      const img = e.target.querySelector('img');
+      const tall = new Image();
+      tall.onload = () => { img.removeAttribute('height'); img.src = tall.src; e.target.classList.add('is-tall'); medir(e.target); };
+      tall.src = img.dataset.tall;
+    }), { rootMargin: '300px' });
+    if (!motion.calm) phones.forEach(p => cargar.observe(p));
+    addEventListener('resize', () => document.querySelectorAll('.phone.is-tall').forEach(medir));
+
+    // En pantallas táctiles no hay "pasar el mouse": se recorre sola mientras está a la vista
+    if (!matchMedia('(hover: hover)').matches) {
+      const play = new IntersectionObserver(entries => entries.forEach(e =>
+        e.target.classList.toggle('is-playing', e.isIntersecting)
+      ), { threshold: 0.7 });
+      phones.forEach(p => play.observe(p));
+    }
+  </script>
+</body>
+</html>
