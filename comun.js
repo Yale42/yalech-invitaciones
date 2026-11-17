@@ -11,6 +11,7 @@
 //   archivo: 'boda-mariana-y-diego.ics',
 //   pasesPorDefecto: 2, maxPases: 10,
 //   introMs: 2500,                          // cuánto dura la animación de entrada
+//   comidaTxt: 'Llevo',                     // opcional; cómo se llama el campo «comida» en el mensaje
 //   efectos: { reveal: '.selector', stagger: '.selector' },
 // }
 //
@@ -175,7 +176,7 @@
         `Nombre: ${nombre}`,
       ];
       if (invitado && invitado !== nombre) lineas.push(`Pase: ${invitado}`);
-      if (viene && d.comida?.trim()) lineas.push(`Comida: ${d.comida.trim()}`);
+      if (viene && d.comida?.trim()) lineas.push(`${E.comidaTxt || 'Comida'}: ${d.comida.trim()}`);
       if (d.mensaje?.trim()) lineas.push('', `💌 ${d.mensaje.trim()}`);
       window.open(`https://wa.me/${E.whatsapp}?text=${encodeURIComponent(lineas.join('\n'))}`, '_blank', 'noopener');
       $('.form-ok', form).hidden = false;
