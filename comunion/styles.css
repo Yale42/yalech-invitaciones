@@ -1,0 +1,206 @@
+/* Primera Comunión de Santiago (ejemplo). Marfil, oro y vitral. Primero celular, luego pantallas grandes. */
+:root {
+  --ivory: #f8f4ec;
+  --paper: #fffdf8;
+  --warm: #f1e8d8;
+  --gold: #c6a15b;
+  --gold-d: #9c7a36;
+  --sky: #8fb8d8;
+  --ink: #2d2a24;
+  --muted: #736c60;
+  --serif: "Marcellus", Georgia, serif;
+  --sans: "Nunito Sans", system-ui, sans-serif;
+  --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: var(--sans); font-size: 1.04rem; line-height: 1.65; color: var(--ink); background: var(--paper); -webkit-font-smoothing: antialiased; }
+body.is-locked { overflow: hidden; }
+[hidden] { display: none !important; }
+main { overflow-x: clip; }
+a { color: inherit; }
+button, input, select, textarea { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--gold-d); outline-offset: 3px; }
+
+.wrap { width: min(100% - 40px, 1000px); margin-inline: auto; }
+.narrow { width: min(100% - 40px, 520px); }
+.center { text-align: center; }
+.section { padding: 80px 0; }
+.section--warm { background: var(--warm); }
+.section--gold { background: linear-gradient(160deg, var(--gold), var(--gold-d)); color: #fff; }
+
+.eyebrow { font-weight: 700; font-size: 0.8rem; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold-d); }
+.section--gold .eyebrow { color: #fff; opacity: 0.9; }
+.h2 { margin-top: 6px; font-family: var(--serif); font-weight: 400; font-size: clamp(2.2rem, 9vw, 3.2rem); line-height: 1.1; }
+.lead { margin-top: 10px; color: var(--muted); }
+.lead strong { color: var(--ink); }
+
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 52px; padding: 12px 24px; border: 0; border-radius: 99px; font-weight: 700; font-size: 0.98rem; text-decoration: none; cursor: pointer; transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease; }
+.btn--gold { background: var(--gold-d); color: #fff; }
+.btn--gold:hover { background: #876828; }
+.btn--line { background: transparent; color: var(--gold-d); box-shadow: inset 0 0 0 1.5px var(--gold); }
+.btn--line:hover { background: var(--gold-d); color: #fff; }
+.btn--white { background: #fff; color: var(--gold-d); }
+.btn--ghost { background: transparent; color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255, 255, 255, 0.6); }
+
+/* ========== Entrada: vitral ========== */
+.chapel {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 22px;
+  padding: 24px;
+  text-align: center;
+  background: radial-gradient(circle at 50% 45%, #fffaf0, var(--ivory) 45%, var(--warm));
+  transition: opacity 0.7s ease 1s, visibility 0s linear 1.7s;
+}
+.chapel-kicker { font-family: var(--serif); font-size: clamp(1.7rem, 7vw, 2.2rem); animation: rise 0.8s var(--ease) both; }
+.chapel-hint { font-size: 0.92rem; color: var(--muted); animation: rise 0.8s var(--ease) 0.3s both; }
+.window {
+  position: relative;
+  width: min(62vw, 240px);
+  aspect-ratio: 3 / 4.4;
+  padding: 0;
+  border: 0;
+  border-radius: 999px 999px 10px 10px;
+  background: none;
+  cursor: pointer;
+  perspective: 900px;
+  box-shadow: 0 0 0 8px #fff, 0 0 0 10px var(--gold), 0 30px 50px -24px rgba(45, 42, 36, 0.55);
+  animation: rise 0.9s var(--ease) 0.15s both;
+}
+.window-light { position: absolute; inset: 0; display: grid; place-items: center; overflow: hidden; border-radius: inherit; background: radial-gradient(circle at 50% 40%, #fff 0 18%, #fff3cf 40%, #f2d796 75%); }
+.window-light i { font-size: 3.4rem; color: var(--gold); filter: drop-shadow(0 0 18px rgba(255, 255, 255, 0.9)); }
+/* Puertas de vitral: vidrio de colores con plomo dorado */
+.door {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  background:
+    linear-gradient(var(--gold) 0 0) 50% 0 / 3px 100% no-repeat,
+    linear-gradient(var(--gold) 0 0) 0 33% / 100% 3px no-repeat,
+    linear-gradient(var(--gold) 0 0) 0 66% / 100% 3px no-repeat,
+    conic-gradient(from 45deg at 50% 50%, #7aa9cf 0 25%, #e8c66d 0 50%, #b85a6a 0 75%, #6fa38b 0) 0 0 / 50% 33.4%,
+    #7aa9cf;
+  box-shadow: inset 0 0 0 3px var(--gold);
+  transition: transform 1s var(--ease) 0.1s;
+}
+.door::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: linear-gradient(120deg, rgba(255, 255, 255, 0.35), transparent 40%); }
+.door--l { left: 0; border-radius: 999px 0 0 10px; transform-origin: 0 50%; }
+.door--r { right: 0; border-radius: 0 999px 10px 0; transform-origin: 100% 50%; }
+.window:hover .door--l { transform: rotateY(-10deg); }
+.window:hover .door--r { transform: rotateY(10deg); }
+.window:focus-visible { outline: none; box-shadow: 0 0 0 8px #fff, 0 0 0 10px var(--gold), 0 0 0 14px var(--sky); }
+.chapel.is-open .door--l { transform: rotateY(-105deg); }
+.chapel.is-open .door--r { transform: rotateY(105deg); }
+.chapel.is-open .chapel-kicker, .chapel.is-open .chapel-hint { opacity: 0; transition: opacity 0.3s ease; }
+.chapel.is-open .window { animation: glow 1.2s ease forwards; }
+.chapel.is-open { opacity: 0; visibility: hidden; }
+.chapel.is-gone { display: none; }
+@keyframes glow { to { box-shadow: 0 0 0 8px #fff, 0 0 0 10px var(--gold), 0 0 120px 40px rgba(255, 236, 180, 0.9); } }
+@keyframes rise { from { opacity: 0; translate: 0 24px; } }
+
+/* ========== Portada ========== */
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100svh;
+  padding: 90px 20px;
+  overflow: hidden;
+  text-align: center;
+  background: radial-gradient(120% 70% at 50% 0%, #fff8e6, var(--ivory) 55%, var(--warm));
+}
+.rays { position: absolute; top: -30%; left: 50%; width: 160vmax; height: 160vmax; translate: -50% 0; background: repeating-conic-gradient(from 0deg at 50% 0%, rgba(198, 161, 91, 0.14) 0 4deg, transparent 4deg 12deg); mask: radial-gradient(circle at 50% 0%, #000, transparent 60%); animation: shine 30s linear infinite; }
+@keyframes shine { to { rotate: 20deg; } }
+.hero-text { position: relative; }
+.kicker { font-weight: 700; font-size: 0.82rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold-d); }
+.title { margin-top: 10px; font-family: var(--serif); font-weight: 400; font-size: clamp(3.8rem, 18vw, 7.4rem); line-height: 1; }
+.verse { margin-top: 18px; font-family: var(--serif); font-size: 1.25rem; color: var(--muted); }
+.verse span { display: block; margin-top: 4px; font-family: var(--sans); font-size: 0.82rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold-d); }
+.hero-date { display: inline-block; margin-top: 22px; padding: 10px 22px; border-radius: 99px; background: #fff; font-weight: 700; box-shadow: inset 0 0 0 1px var(--gold), 0 14px 26px -18px rgba(45, 42, 36, 0.5); }
+
+.hero-text > * { opacity: 0; translate: 0 20px; }
+.is-open-page .hero-text > * { opacity: 1; translate: 0 0; transition: opacity 0.9s var(--ease), translate 0.9s var(--ease); }
+.is-open-page .hero-text > :nth-child(1) { transition-delay: 1.1s; }
+.is-open-page .hero-text > :nth-child(2) { transition-delay: 1.25s; }
+.is-open-page .hero-text > :nth-child(3) { transition-delay: 1.4s; }
+.is-open-page .hero-text > :nth-child(4) { transition-delay: 1.55s; }
+
+/* ========== Estampita ========== */
+.intro-text { font-family: var(--serif); font-size: 1.35rem; line-height: 1.5; text-wrap: balance; }
+.card { position: relative; margin: 40px auto 0; max-width: 300px; padding: 22px 22px 24px; border-radius: 999px 999px 18px 18px; background: #fff; box-shadow: inset 0 0 0 6px #fff, inset 0 0 0 7px var(--gold), 0 30px 50px -30px rgba(45, 42, 36, 0.6); }
+.card-arch { width: 120px; margin: 18px auto 6px; }
+.card-arch svg { display: block; width: 100%; }
+.card-top { font-weight: 700; font-size: 0.76rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-d); }
+.card-name { margin-top: 4px; font-family: var(--serif); font-size: 1.8rem; line-height: 1.15; overflow-wrap: break-word; }
+.card-seats { color: var(--muted); }
+.card-foot { margin-top: 14px; padding-top: 12px; border-top: 1px solid var(--warm); font-size: 0.82rem; letter-spacing: 0.08em; color: var(--muted); }
+
+/* ========== Familia ========== */
+.people { display: grid; gap: 12px; margin-top: 28px; }
+.people div { padding: 20px; border-radius: 20px; background: #fff; }
+.people small { font-weight: 700; font-size: 0.78rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold-d); }
+.people strong { display: block; margin-top: 4px; font-family: var(--serif); font-weight: 400; font-size: 1.4rem; line-height: 1.3; }
+
+/* ========== Programa ========== */
+.stops { display: grid; gap: 16px; margin-top: 34px; }
+.stop { display: grid; gap: 6px; justify-items: start; padding: 26px 22px; border-radius: 24px; background: var(--ivory); }
+.stop-ico { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 50%; background: #fff; color: var(--gold-d); font-size: 1.2rem; box-shadow: inset 0 0 0 1px var(--gold); }
+.stop-time { margin-top: 8px; font-weight: 700; letter-spacing: 0.12em; color: var(--gold-d); }
+.stop h3 { font-family: var(--serif); font-weight: 400; font-size: 1.8rem; line-height: 1.15; }
+.stop > p:not(.stop-time) { color: var(--muted); }
+.stop-note { font-style: italic; }
+.stop .btn { margin-top: 10px; }
+
+/* ========== Cuenta regresiva ========== */
+.clock { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; max-width: 460px; margin: 18px auto 0; }
+.clock > div { padding: 14px 4px; border-radius: 18px; background: rgba(255, 255, 255, 0.16); box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35); }
+.clock strong { display: block; font-family: var(--serif); font-weight: 400; font-size: clamp(2.1rem, 9vw, 2.9rem); line-height: 1.1; font-variant-numeric: tabular-nums; }
+.clock small { font-size: 0.75rem; font-weight: 700; opacity: 0.85; }
+.clock-done { margin-top: 12px; font-family: var(--serif); font-size: 1.8rem; }
+.cal-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 30px; }
+
+/* ========== Confirmación ========== */
+.rsvp { display: grid; gap: 20px; margin-top: 32px; padding: 26px 22px; border-radius: 26px; background: var(--ivory); }
+.field { display: grid; gap: 8px; border: 0; min-width: 0; }
+.field > span, .field legend { font-weight: 700; }
+.field small { font-weight: 400; color: var(--muted); }
+.field legend { margin-bottom: 8px; }
+.field input, .field select, .field textarea { width: 100%; padding: 13px 14px; border: 1.5px solid #e6dac4; border-radius: 14px; background: #fff; font-size: 1rem; }
+.field textarea { resize: vertical; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--gold); }
+.choice { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choice label { position: relative; cursor: pointer; }
+.choice input { position: absolute; opacity: 0; inset: 0; }
+.choice span { display: block; padding: 12px 10px; border: 1.5px solid #e6dac4; border-radius: 14px; background: #fff; text-align: center; font-weight: 700; transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease; }
+.choice input:checked + span { background: var(--gold-d); border-color: var(--gold-d); color: #fff; }
+.choice input:focus-visible + span { outline: 2px solid var(--sky); outline-offset: 2px; }
+.rsvp .btn { width: 100%; }
+.form-error { color: #a83232; font-weight: 600; }
+.form-ok { padding: 12px 14px; border-radius: 14px; background: #fff; text-align: center; font-weight: 600; box-shadow: inset 0 0 0 1px var(--gold); }
+
+/* ========== Pie ========== */
+.footer { padding: 70px 20px 46px; background: var(--warm); text-align: center; }
+.footer-title { font-family: var(--serif); font-size: clamp(1.6rem, 6.5vw, 2.3rem); line-height: 1.25; text-wrap: balance; }
+.footer-title em { font-style: normal; color: var(--gold-d); }
+.footer p:not(.footer-title) { margin-top: 8px; color: var(--muted); }
+.credit { display: inline-block; margin-top: 34px; font-size: 0.85rem; color: var(--muted); text-decoration: none; }
+.credit:hover { color: var(--ink); }
+
+/* ========== Pantallas grandes ========== */
+@media (min-width: 760px) {
+  .section { padding: 108px 0; }
+  .stops { grid-template-columns: 1fr 1fr; }
+  .people { grid-template-columns: 1fr 1fr; }
+  .rsvp { padding: 38px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { animation: none !important; transition-duration: 0.01s !important; transition-delay: 0s !important; }
+}

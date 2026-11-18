@@ -8,11 +8,14 @@ carpeta y se puede abrir en vivo. Para un cliente real, copia la carpeta de la i
 | --- | --- | --- | --- |
 | `boda/` | Boda | Sobre con sello | Generador de pases (`boda/pases.html`), mesa de regalos |
 | `xv/` | XV años | Pase VIP que gira | Padres y padrinos, vals |
+| `despedida/` | Despedida de soltera | Botella que se descorcha | Quiz «¿qué tanto conoces a la novia?», cooperación con CLABE, talla de playera |
 | `aniversario/` | Bodas de oro | Disco que sale de su funda | Historia por años, piden canción al confirmar |
 | `graduacion/` | Graduación | Diploma que se desenrolla | Ceremonia y fiesta, eligen a cuál van |
 | `posada/` | Posada navideña | Piñata de 3 golpes | Eligen qué llevar, intercambio |
+| `revelacion/` | Revelación de género | Votan «niño» o «niña» | El pase toma el color de su equipo; el voto llega en la confirmación |
 | `baby-shower/` | Baby shower | Raspadita con el nombre | Talla de pañales por apellido, apuestas de fecha y peso |
 | `bautizo/` | Bautizo | Telón con paloma | Padrinos, misa y comida |
+| `comunion/` | Primera comunión | Vitral que se abre | Estampita como pase, misa y comida, alergias de los niños |
 | `cumple/` | Cumpleaños infantil | Globo con confeti | Boleto de abordaje, ilustrada |
 
 ## Cómo funciona

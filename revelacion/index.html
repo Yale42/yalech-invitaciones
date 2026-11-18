@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>¿Niño o niña? · Revelación de Mariana y Óscar</title>
+  <meta name="description" content="Sábado 23 de enero de 2027 · 2:00 PM · Querétaro. Ven a descubrir con nosotros si es niño o niña." />
+  <meta name="theme-color" content="#fdf7f0" />
+  <!-- Vista previa al compartir (WhatsApp, Facebook…). Al publicar, cambia la ruta de la imagen
+       por la URL completa, ej. https://tudominio.com/assets/og.jpg -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="¿Niño o niña? · Revelación de Mariana y Óscar" />
+  <meta property="og:description" content="Sábado 23 de enero de 2027 · 2:00 PM · Querétaro. Ven a descubrir con nosotros si es niño o niña." />
+  <meta property="og:image" content="assets/og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css?v=1" />
+</head>
+<body class="is-locked">
+  <!-- Invitación de ejemplo (pareja ficticia). Ilustrada con CSS: no usa fotos.
+       Fecha, lugar y WhatsApp están en invitacion.js (la lógica, en ../comun.js).
+       Cada invitado recibe su propio enlace: index.html?n=Familia%20López&p=4
+       Al abrir, el invitado vota «niño» o «niña»: su pase toma el color de su equipo
+       y el voto llega en la confirmación. -->
+
+  <!-- ========== Entrada: vota para abrir ========== -->
+  <div class="vote" data-intro role="dialog" aria-modal="true" aria-labelledby="vote-title">
+    <p class="vote-kicker">Revelación de género</p>
+    <h2 class="vote-title" id="vote-title">¿Niño o niña?</h2>
+    <p class="vote-sub">Vota para abrir tu invitación</p>
+    <div class="vote-options">
+      <button class="vote-btn vote-btn--boy" type="button" data-abrir data-equipo="Niño"><b class="vote-ico" aria-hidden="true">💙</b><span>Niño</span></button>
+      <button class="vote-btn vote-btn--girl" type="button" data-abrir data-equipo="Niña"><b class="vote-ico" aria-hidden="true">💗</b><span>Niña</span></button>
+    </div>
+    <p class="vote-hint">Puedes cambiar tu voto al confirmar 😉</p>
+  </div>
+
+  <main>
+    <!-- ========== Portada ========== -->
+    <section class="hero">
+      <span class="globo globo--a" aria-hidden="true"></span>
+      <span class="globo globo--b" aria-hidden="true"></span>
+      <span class="globo globo--c" aria-hidden="true"></span>
+      <span class="globo globo--d" aria-hidden="true"></span>
+      <div class="hero-text">
+        <p class="kicker">Mariana &amp; Óscar</p>
+        <h1 class="title"><span class="t-boy">¿Niño</span> <span class="t-o">o</span> <span class="t-girl">niña?</span></h1>
+        <p class="hero-sub">Ven a descubrirlo con nosotros</p>
+        <p class="hero-date">Sábado 23 de enero · 2:00 PM</p>
+      </div>
+    </section>
+
+    <!-- ========== Pase con el equipo ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="intro-text">Ya sabemos que viene en camino… lo que no sabemos es si es niño o niña. ¡Lo descubrimos todos juntos!</p>
+        <div class="team" data-team-card>
+          <p class="team-top">Pase para</p>
+          <p class="team-name" data-invitado>Invitado especial</p>
+          <p class="team-seats"><span data-pases>2</span> <span data-pases-txt>lugares</span></p>
+          <p class="team-badge"><i class="fa-solid fa-heart"></i> <span data-team-txt>Aún sin equipo</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Pistas ========== -->
+    <section class="section section--soft">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Según la abuela</p>
+          <h2 class="h2">Las pistas</h2>
+          <p class="lead">Ni la ciencia ni la abuela se ponen de acuerdo. Tú decide.</p>
+        </div>
+        <ul class="clues">
+          <li><span class="clue-tag clue-tag--girl">Niña</span><strong>Antojos de dulce</strong><span>Chocolate a las 2 de la mañana.</span></li>
+          <li><span class="clue-tag clue-tag--boy">Niño</span><strong>Panza picudita</strong><span>Y se nota más de frente que de lado.</span></li>
+          <li><span class="clue-tag clue-tag--girl">Niña</span><strong>Corazón acelerado</strong><span>Más de 140 latidos por minuto.</span></li>
+          <li><span class="clue-tag clue-tag--boy">Niño</span><strong>Patadas de futbolista</strong><span>Sobre todo cuando juega el América.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ========== Cuenta regresiva ========== -->
+    <section class="section section--split">
+      <div class="wrap center">
+        <p class="eyebrow" data-clock-label>Lo descubrimos en</p>
+        <div class="clock" data-clock>
+          <div><strong data-u="d">000</strong><small>días</small></div>
+          <div><strong data-u="h">00</strong><small>horas</small></div>
+          <div><strong data-u="m">00</strong><small>min</small></div>
+          <div><strong data-u="s">00</strong><small>seg</small></div>
+        </div>
+        <p class="clock-done" hidden>¡Hoy lo descubrimos! 💙💗</p>
+        <div class="cal-actions">
+          <a class="btn btn--ink" data-gcal target="_blank" rel="noopener"><i class="fa-regular fa-calendar-plus"></i> Google Calendar</a>
+          <button class="btn btn--white" type="button" data-ics><i class="fa-brands fa-apple"></i> iPhone / Outlook</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== Dónde y qué ponerte ========== -->
+    <section class="section">
+      <div class="wrap narrow center">
+        <p class="eyebrow">El lugar</p>
+        <h2 class="h2">¿Dónde es?</h2>
+        <div class="where">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Terraza Los Arcos</strong>
+            <span>Av. Zaragoza 210, Col. Centro, Querétaro</span>
+            <span>Sábado 23 de enero · 2:00 a 6:00 PM</span>
+          </div>
+        </div>
+        <div class="dress">
+          <span class="dress-dots" aria-hidden="true"><b></b><b></b></span>
+          <div><strong>Ven del color de tu equipo</strong><span>Azul si crees que es niño, rosa si crees que es niña.</span></div>
+        </div>
+        <a class="btn btn--ink" href="https://maps.google.com/?q=Centro+Queretaro" target="_blank" rel="noopener"><i class="fa-solid fa-map"></i> Cómo llegar</a>
+      </div>
+    </section>
+
+    <!-- ========== Confirmación ========== -->
+    <section class="section section--soft" id="confirmar">
+      <div class="wrap narrow">
+        <div class="center">
+          <p class="eyebrow">Confirma</p>
+          <h2 class="h2">¿Vienes a descubrirlo?</h2>
+          <p class="lead">Avísanos antes del <strong>16 de enero</strong>.</p>
+        </div>
+        <form class="rsvp" id="rsvp-form" novalidate>
+          <label class="field">
+            <span>Nombre</span>
+            <input name="nombre" required maxlength="80" autocomplete="name" />
+          </label>
+          <fieldset class="field">
+            <legend>¿Vienes?</legend>
+            <div class="choice">
+              <label><input type="radio" name="asiste" value="si" checked /><span>¡Ahí estaré!</span></label>
+              <label><input type="radio" name="asiste" value="no" /><span>No podré</span></label>
+            </div>
+          </fieldset>
+          <fieldset class="field">
+            <legend>Tu voto</legend>
+            <div class="choice choice--team">
+              <label><input type="radio" name="comida" value="Niño" /><span>💙 Niño</span></label>
+              <label><input type="radio" name="comida" value="Niña" /><span>💗 Niña</span></label>
+            </div>
+          </fieldset>
+          <label class="field" data-solo-si>
+            <span>¿Cuántos vienen?</span>
+            <select name="lugares"></select>
+          </label>
+          <label class="field">
+            <span>Mensaje <small>(opcional)</small></span>
+            <textarea name="mensaje" rows="3" maxlength="400" placeholder="¡Seguro es niña!"></textarea>
+          </label>
+          <p class="form-error" hidden></p>
+          <button class="btn btn--ink" type="submit"><i class="fa-brands fa-whatsapp"></i> Confirmar</button>
+          <p class="form-ok" hidden>¡Gracias! Se abrió WhatsApp con tu confirmación; solo falta enviarla.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer-title">¡Te esperamos!</p>
+    <p>Mariana, Óscar y bebé</p>
+    <a class="credit" href="../">Invitación de yalech →</a>
+  </footer>
+
+  <script src="../assets/motion.js"></script>
+  <script src="invitacion.js?v=1"></script>
+  <script src="../comun.js?v=2"></script>
+</body>
+</html>
